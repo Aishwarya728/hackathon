@@ -46,39 +46,46 @@ export class AppComponent implements OnDestroy {
         }, 1000);
       }
 
-      function(number:any):any{
+      function(number: any): any {
         console.log(number);
-        this.state='state'+number;
-        this.id=number;
+        this.state = 'state' + number;
+        this.id = number;
         console.log(this.state);
-        this.random=(Math.floor((Math.random( ) *20)%4)+1);
+        this.random = (Math.floor((Math.random( ) * 20) % 4 ) + 1);
         console.log(this.random);
         }
 
-        change(btn,number:any)
-        { 
-          if(number==this.temp)
-          this.count +=1;
-          this.state='b1';
-          var property=document.getElementById(this.state);
-          property.style.background="black";
-          this.state='b2';
-          var property=document.getElementById(this.state);
-          property.style.background="black";
-          this.state='b3';
-          var property=document.getElementById(this.state);
-          property.style.background="black";
-          this.state='b4';
-          var property=document.getElementById(this.state);
-          property.style.background="black";
-          this.state='b'+this.random;
-          var property=document.getElementById(this.state);
-          property.style.background="white";
+        change(number: any) {
+          console.log('this value' + this.temp);
+          if (number === this.temp) {
+          if (this.flag === 1) {
+          this.count += 1;
+          }
+          }
+          this.state = 'b1';
+          // tslint:disable-next-line:no-var-keyword
+          var property = document.getElementById(this.state);
+          property.style.background = 'black';
+          this.state = 'b2';
+          // tslint:disable-next-line:no-var-keyword
+          var property = document.getElementById(this.state);
+          property.style.background = 'black';
+          this.state = 'b3';
+          // tslint:disable-next-line:no-var-keyword
+          var property = document.getElementById(this.state);
+          property.style.background = 'black';
+          this.state = 'b4';
+          // tslint:disable-next-line:no-var-keyword
+          var property = document.getElementById(this.state);
+          property.style.background = 'black';
+          this.state = 'b' + this.random;
+          // tslint:disable-next-line:no-var-keyword
+          var property = document.getElementById(this.state);
+          property.style.background = 'white';
           console.log(this.count);
           this.temp = this.random;
         }
 }
 
-  
 
 

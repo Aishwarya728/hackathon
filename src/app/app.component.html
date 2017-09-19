@@ -5,27 +5,30 @@
         </div> 
     </div>  
 </div>
+<br>
 
-<p>{{message}}</p>
+<p id="message"><strong>{{message}}</strong></p>
+
+<br>
 
 
 <div class="container">
     <div class="row">
         <div class="col-lg-4">
-          <button  class="button btn btn-default" (click)="function(1); change('button1',1);"  id ="b1"></button>
+          <button  class="button btn btn-default" (click)="function(1); change(1);"  id ="b1"></button>
         </div>
 
         <div class="col-lg-4">
-            <button (click)="function(2); change('button2',2);" class="button  btn btn-default" id="b2"></button>
+            <button (click)="function(2); change(2);" class="button  btn btn-default" id="b2"></button>
         </div>
     </div>
     
    <div class="row">
         <div class="col-lg-4">
-            <button (click)="function(3); change('button3',3);" class="button  btn btn-default" id="b3"></button>
+            <button (click)="function(3); change(3);" class="button  btn btn-default" id="b3"></button>
         </div>
         <div class="col-lg-4">
-            <button (click)="function(4); change('button4',4);" class="button  btn btn-default" id="b4"></button>
+            <button (click)="function(4); change(4);" class="button  btn btn-default" id="b4"></button>
         </div>
   </div> 
   </div>
