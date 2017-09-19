@@ -1,0 +1,82 @@
+cdf14996d910bda95d9a31a20bcb1a92
+
+<div class="container">
+    <div class="col-sm-6">
+        <input class="form-control" id="Location" placeholder="Location" type="Location">
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Shop</button>
+                <div class="dropdown-content">
+                    <a href="#">Categories</a>
+                    <a href="#">Combination</a>
+                    <a href="#">Single Product</a>
+                    <a href="#">Cart</a>
+                    <a href="#">Checkout</a>
+                </div>
+            </div>
+        </li>         
+    </div>
+
+    <div class="col-sm-6">
+            <div class="row" id="searchbar">
+                    <div class="form-inline">
+                        
+                            <input type="text" placeholder="Cuisine" class="form-control" id="cuisine">							
+                            <input type="text" placeholder="City" class="form-control" id="city">
+                            <button type="button" class="btn btn-primary">Search</button>
+                    
+                        
+                    </div>
+                </div>
+            
+    </div>
+</div>
+
+
+
+.dropbtn{
+    margin-top: 300px;
+}
+.dropbtn 
+{
+    color:black;
+    cursor: pointer;
+    border:solid;
+}
+
+
+.dropdown-content 
+{
+    display:none;
+    position: absolute;
+    background-color:black;
+    min-width:160px;
+
+}
+
+
+.dropdown-content a 
+{
+    color: white;
+    text-align:left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    text-decoration: none;
+    display:block;
+}
+
+.dropdown-content a:hover 
+{
+    background-color: red;
+}
+
+
+.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+
+#Location{
+    margin-top:250px;
+}
