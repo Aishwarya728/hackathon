@@ -12,7 +12,7 @@ export class AppComponent implements OnDestroy {
     title = 'app';
     intervalId = 0;
     message = '';
-    seconds = 5;
+    seconds = 90;
     flag = 1;
 
     random: any;
@@ -20,13 +20,15 @@ export class AppComponent implements OnDestroy {
     id: any;
     count = 0;
     temp: any;
+    gameStarted = 0;
 
     clearTimer() { clearInterval(this.intervalId); }
 
     // ngOnInit()    { this.start(); }
     ngOnDestroy() { this.clearTimer(); }
 
-    start() { this.countDown(); }
+    start() { this.countDown();
+        this.gameStarted = 1; }
       stop() {
         this.clearTimer();
         this.message = `Holding at T-${this.seconds} seconds`;
@@ -58,7 +60,7 @@ export class AppComponent implements OnDestroy {
         change(number: any) {
           console.log('this value' + this.temp);
           if (number === this.temp) {
-          if (this.flag === 1) {
+          if (this.flag === 1 && this.gameStarted === 1 ) {
           this.count += 1;
           }
           }
